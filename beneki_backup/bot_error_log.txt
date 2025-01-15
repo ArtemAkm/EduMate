@@ -1,0 +1,39 @@
+ERROR:root:  File "C:\Users\konstpm\Desktop\Beneki\main.py", line 1451, in <module>
+    bot.polling()
+  File "C:\Documents and Settings\konstpm\Local Settings\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1189, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Documents and Settings\konstpm\Local Settings\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1264, in __threaded_polling
+    raise e
+  File "C:\Documents and Settings\konstpm\Local Settings\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1226, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Documents and Settings\konstpm\Local Settings\Programs\Python\Python312\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Documents and Settings\konstpm\Local Settings\Programs\Python\Python312\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "C:\Users\konstpm\Desktop\Beneki\main.py", line 683, in get_homework
+    date_text = f"\n\U0001f538Дата последнего изменения: {relative_date(date)}"
+                                                  ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\konstpm\Desktop\Beneki\main.py", line 621, in relative_date
+    date = datetime.strptime(date_str, '%Y-%m-%d').date()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+ERROR:root:TypeError: strptime() argument 1 must be str, not datetime.date
+ERROR:root:  File "C:\Users\konstpm\Desktop\Beneki\main.py", line 1451, in <module>
+    bot.polling()
+  File "C:\Documents and Settings\konstpm\Local Settings\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1189, in polling
+    self.__threaded_polling(non_stop=non_stop, interval=interval, timeout=timeout, long_polling_timeout=long_polling_timeout,
+  File "C:\Documents and Settings\konstpm\Local Settings\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1264, in __threaded_polling
+    raise e
+  File "C:\Documents and Settings\konstpm\Local Settings\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 1226, in __threaded_polling
+    self.worker_pool.raise_exceptions()
+  File "C:\Documents and Settings\konstpm\Local Settings\Programs\Python\Python312\Lib\site-packages\telebot\util.py", line 150, in raise_exceptions
+    raise self.exception_info
+  File "C:\Documents and Settings\konstpm\Local Settings\Programs\Python\Python312\Lib\site-packages\telebot\util.py", line 93, in run
+    task(*args, **kwargs)
+  File "C:\Documents and Settings\konstpm\Local Settings\Programs\Python\Python312\Lib\site-packages\telebot\__init__.py", line 8822, in _run_middlewares_and_handler
+    result = handler['function'](message)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\konstpm\Desktop\Beneki\main.py", line 945, in handle_homework_command
+    cursor.execute('SELECT subject FROM schedule WHERE command=?', (command,))
+
+ERROR:root:ProgrammingError: Recursive use of cursors not allowed.
